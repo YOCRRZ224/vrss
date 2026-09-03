@@ -8,9 +8,7 @@
 
         <title>VorcineX Community RSS</title>
 
-        <link>
-            https://YOCRRZ224.github.io/vrss/
-        </link>
+        <link>https://YOCRRZ224.github.io/vrss/</link>
 
         <description>
             Community RSS feed powered by vRSS
@@ -27,56 +25,55 @@
         
             <item>
                 <title>tesdt1</title>
+                <link>https://yocrrz.likes-ur.mom/Vorcindhdedbddbdbx</link>
+                <description><![CDATA[testn2 dxnbfkers<br/><br/><a href="https://yocrrz.likes-ur.mom/Vorcindhdedbddbdbx">Open link</a><br/>Submitted by @yocrrz]]></description>
+                <pubDate>Thu, 03 Sep 2026 17:09:53 GMT</pubDate>
+                <guid isPermaLink="false">urn:vrss:6</guid>
+                <dc:creator>@yocrrz</dc:creator>
+            </item>
+            
+            <item>
+                <title>tesdt1</title>
                 <link>https://yocrrz.likes-ur.mom/Vorcinedbdx</link>
-                <description>testn2 dbfkers<br><br><a href="https://yocrrz.likes-ur.mom/Vorcinedbdx">Open link</a><br>Submitted by @yocrrz</description>
+                <description><![CDATA[testn2 dbfkers<br/><br/><a href="https://yocrrz.likes-ur.mom/Vorcinedbdx">Open link</a><br/>Submitted by @yocrrz]]></description>
                 <pubDate>Thu, 03 Sep 2026 17:03:16 GMT</pubDate>
-                <guid isPermaLink="false">
-                    urn:vrss:5
-                </guid>
+                <guid isPermaLink="false">urn:vrss:5</guid>
                 <dc:creator>@yocrrz</dc:creator>
             </item>
             
             <item>
                 <title>tesdt1</title>
                 <link>https://yocrrz.likes-ur.mom/Vorcinedx</link>
-                <description>testn2 fkers<br><br><a href="https://yocrrz.likes-ur.mom/Vorcinedx">Open link</a><br>Submitted by @yocrrz</description>
+                <description><![CDATA[testn2 fkers<br/><br/><a href="https://yocrrz.likes-ur.mom/Vorcinedx">Open link</a><br/>Submitted by @yocrrz]]></description>
                 <pubDate>Thu, 03 Sep 2026 17:00:02 GMT</pubDate>
-                <guid isPermaLink="false">
-                    urn:vrss:4
-                </guid>
+                <guid isPermaLink="false">urn:vrss:4</guid>
                 <dc:creator>@yocrrz</dc:creator>
             </item>
             
             <item>
                 <title>test3</title>
                 <link>https://yocrrz.likes-ur.mom/Vorcinx</link>
-                <description>test3 fkers<br><br><a href="https://yocrrz.likes-ur.mom/Vorcinx">Open link</a><br>Submitted by @yocrrz</description>
+                <description><![CDATA[test3 fkers<br/><br/><a href="https://yocrrz.likes-ur.mom/Vorcinx">Open link</a><br/>Submitted by @yocrrz]]></description>
                 <pubDate>Thu, 03 Sep 2026 16:58:09 GMT</pubDate>
-                <guid isPermaLink="false">
-                    urn:vrss:3
-                </guid>
+                <guid isPermaLink="false">urn:vrss:3</guid>
                 <dc:creator>@yocrrz</dc:creator>
             </item>
             
             <item>
                 <title>test1</title>
                 <link>https://yocrrz.likes-ur.mom/Vorcinex</link>
-                <description>test2 fkers<br><br><a href="https://yocrrz.likes-ur.mom/Vorcinex">Open link</a><br>Submitted by @yocrrz</description>
+                <description><![CDATA[test2 fkers<br/><br/><a href="https://yocrrz.likes-ur.mom/Vorcinex">Open link</a><br/>Submitted by @yocrrz]]></description>
                 <pubDate>Thu, 03 Sep 2026 16:53:45 GMT</pubDate>
-                <guid isPermaLink="false">
-                    urn:vrss:2
-                </guid>
+                <guid isPermaLink="false">urn:vrss:2</guid>
                 <dc:creator>@yocrrz</dc:creator>
             </item>
             
             <item>
                 <title>test1</title>
                 <link>https://yocrrz.likes-ur.mom</link>
-                <description>test1 fkers<br><br><a href="https://yocrrz.likes-ur.mom">Open link</a><br>Submitted by @yocrrz</description>
+                <description><![CDATA[test1 fkers<br/><br/><a href="https://yocrrz.likes-ur.mom">Open link</a><br/>Submitted by @yocrrz]]></description>
                 <pubDate>Thu, 03 Sep 2026 16:24:58 GMT</pubDate>
-                <guid isPermaLink="false">
-                    urn:vrss:1
-                </guid>
+                <guid isPermaLink="false">urn:vrss:1</guid>
                 <dc:creator>@yocrrz</dc:creator>
             </item>
             
