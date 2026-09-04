@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Daily Blog — YOCRRZ</title>
+
+    <meta
+        name="description"
+        content="Things I build, discover, break, fix, and everything in between."
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #080808;
+            --surface: #101010;
+            --surface-hover: #151515;
+            --border: rgba(255,255,255,.08);
+            --text: #f5f5f5;
+            --muted: #888;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                radial-gradient(
+                    circle at 50% -20%,
+                    rgba(255,255,255,.08),
+                    transparent 40%
+                ),
+                var(--bg);
+
+            color: var(--text);
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(
+                900px,
+                calc(100% - 32px)
+            );
+
+            margin: auto;
+        }
+
+        header {
+            padding: 80px 0 55px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .brand-dot {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            box-shadow:
+                0 0 18px rgba(255,255,255,.7);
+        }
+
+        .brand span {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        h1 {
+            font-size: clamp(
+                42px,
+                8vw,
+                72px
+            );
+
+            line-height: 1;
+            letter-spacing: -3px;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 16px;
+            max-width: 550px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .nav a {
+            border: 1px solid var(--border);
+            padding: 8px 14px;
+            border-radius: 8px;
+            color: var(--muted);
+            font-size: 13px;
+            transition: .2s ease;
+        }
+
+        .nav a:hover {
+            color: var(--text);
+            background: var(--surface);
+            border-color: rgba(255,255,255,.15);
+        }
+
+        main {
+            padding: 50px 0 100px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .day {
+            margin-bottom: 55px;
+        }
+
+        .date {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+
+        .posts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .post {
+            display: block;
+            padding: 22px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 12px;
+
+            transition:
+                transform .2s ease,
+                background .2s ease,
+                border-color .2s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-2px);
+            background: var(--surface-hover);
+            border-color: rgba(255,255,255,.14);
+        }
+
+        .post-time {
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .post-title {
+            font-size: 20px;
+            font-weight: 650;
+            letter-spacing: -.3px;
+        }
+
+        .post-preview {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 7px;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-author {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .empty {
+            padding: 70px 20px;
+            text-align: center;
+
+            border: 1px dashed var(--border);
+            border-radius: 12px;
+
+            color: var(--muted);
+        }
+
+        .empty strong {
+            display: block;
+            color: #ddd;
+            margin-bottom: 6px;
+        }
+
+        footer {
+            padding: 30px 0 45px;
+            border-top: 1px solid var(--border);
+            color: #555;
+            font-size: 12px;
+        }
+
+        footer .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 55px 0 40px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            main {
+                padding-top: 35px;
+            }
+
+            .post {
+                padding: 18px;
+            }
+
+            .post-title {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <div class="brand">
+
+            <div class="brand-dot"></div>
+
+            <span>
+                YOCRRZ
+            </span>
+
+        </div>
+
+        <h1>
+            Daily Blog
+        </h1>
+
+        <p class="subtitle">
+            Things I build, discover, break, fix,
+            and everything in between.
+        </p>
+
+        <nav class="nav">
+
+            <a href="./">
+                Home
+            </a>
+
+            <a href="./feed.xml">
+                RSS
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+    <div class="container">
+
+        <div class="section-title">
+            Latest entries
+        </div>
+
+        
+            <section class="day">
+
+                <div class="date">
+                    September 04, 2026
+                </div>
+
+                <div class="posts">
+            
+                    <a
+                        class="post"
+                        href="./blog/2026-09-04-test1-1.html"
+                    >
+
+                        <div class="post-time">
+                            08:01 PM
+                        </div>
+
+                        <div class="post-title">
+                            test1
+                        </div>
+
+                        <div class="post-preview">
+                            hello world
+                        </div>
+
+                        <div class="post-author">
+                            — @yocrrz
+                        </div>
+
+                    </a>
+                
+                </div>
+
+            </section>
+            
+
+    </div>
+
+</main>
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <span>
+                © 2026 YOCRRZ
+            </span>
+
+            <span>
+                Powered by vRSS
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
