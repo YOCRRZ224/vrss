@@ -44,6 +44,38 @@
 
             <title>test1</title>
 
+            <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-2.html</link>
+
+            <description>
+                <![CDATA[<p>hello world</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-2.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p>]]>
+            </description>
+
+            <content:encoded>
+                <![CDATA[<article><p>hello world</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-2.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p></article>]]>
+            </content:encoded>
+
+            <pubDate>
+                Fri, 04 Sep 2026 14:34:33 GMT
+            </pubDate>
+
+            <guid isPermaLink="false">
+                urn:vrss:2
+            </guid>
+
+            <dc:creator>
+                @yocrrz
+            </dc:creator>
+
+            <category>VorcineX</category>
+            <category>Community</category>
+            <category>vRSS</category>
+
+        </item>
+        
+        <item>
+
+            <title>test1</title>
+
             <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-1.html</link>
 
             <description>
