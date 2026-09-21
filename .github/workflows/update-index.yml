@@ -11,6 +11,11 @@ on:
 permissions:
   contents: write
 
+# Prevent multiple index-update workflows from running at the same time.
+concurrency:
+  group: update-blog-index
+  cancel-in-progress: false
+
 jobs:
   update-index:
     runs-on: ubuntu-latest
@@ -22,17 +27,9 @@ jobs:
           fetch-depth: 0
 
       - name: Generate index.json
-        run: |
-          python3 generate_index.py
-          echo "Generated index.json:"
-          cat index.json
+        run: python3 generate_index.py
 
-      - name: Check changes
-        run: |
-          git status
-          git diff -- index.json
-
-      - name: Commit index.json
+      - name: Commit and push index.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -44,4 +41,10 @@ jobs:
 
           git add index.json
           git commit -m "chore: update blog index"
-          git push
+
+          # Rebase our generated commit on top of the latest main.
+          git fetch origin main
+          git rebase origin/main
+
+          # Push the rebased commit.
+          git push origin HEAD:main
