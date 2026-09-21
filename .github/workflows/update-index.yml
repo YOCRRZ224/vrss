@@ -3,7 +3,7 @@ name: Update blog index
 on:
   push:
     paths:
-      - "blog/*.html"
+      - "blogs/*.html"
       - "generate_index.py"
       - ".github/workflows/update-index.yml"
   workflow_dispatch:
