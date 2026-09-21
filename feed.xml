@@ -42,84 +42,20 @@
         
         <item>
 
-            <title>max</title>
+            <title>test6</title>
 
-            <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-21-max-3.html</link>
+            <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-21-test6-1.html</link>
 
             <description>
-                <![CDATA[<p>simply lovely</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-21-max-3.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p>]]>
+                <![CDATA[<p>test6</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-21-test6-1.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p>]]>
             </description>
 
             <content:encoded>
-                <![CDATA[<article><p>simply lovely</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-21-max-3.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p></article>]]>
+                <![CDATA[<article><p>test6</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-21-test6-1.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p></article>]]>
             </content:encoded>
 
             <pubDate>
-                Mon, 21 Sep 2026 10:01:44 GMT
-            </pubDate>
-
-            <guid isPermaLink="false">
-                urn:vrss:3
-            </guid>
-
-            <dc:creator>
-                @yocrrz
-            </dc:creator>
-
-            <category>VorcineX</category>
-            <category>Community</category>
-            <category>vRSS</category>
-
-        </item>
-        
-        <item>
-
-            <title>test1</title>
-
-            <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-2.html</link>
-
-            <description>
-                <![CDATA[<p>hello world</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-2.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p>]]>
-            </description>
-
-            <content:encoded>
-                <![CDATA[<article><p>hello world</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-2.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p></article>]]>
-            </content:encoded>
-
-            <pubDate>
-                Fri, 04 Sep 2026 14:34:33 GMT
-            </pubDate>
-
-            <guid isPermaLink="false">
-                urn:vrss:2
-            </guid>
-
-            <dc:creator>
-                @yocrrz
-            </dc:creator>
-
-            <category>VorcineX</category>
-            <category>Community</category>
-            <category>vRSS</category>
-
-        </item>
-        
-        <item>
-
-            <title>test1</title>
-
-            <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-1.html</link>
-
-            <description>
-                <![CDATA[<p>hello world</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-1.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p>]]>
-            </description>
-
-            <content:encoded>
-                <![CDATA[<article><p>hello world</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-04-test1-1.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p></article>]]>
-            </content:encoded>
-
-            <pubDate>
-                Fri, 04 Sep 2026 14:31:15 GMT
+                Mon, 21 Sep 2026 10:18:43 GMT
             </pubDate>
 
             <guid isPermaLink="false">
