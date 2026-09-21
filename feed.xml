@@ -42,6 +42,42 @@
         
         <item>
 
+            <title>Hackathon news</title>
+
+            <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-21-hackathon-news-2.html</link>
+
+            <description>
+                <![CDATA[<p>Me and abduhamid participated in a hackathon with our project <a href="https://sourfly.yocrrz.is-a.dev" target="_blank">
+    sourfly
+</a> and i think we could win? idk well check this project out.</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-21-hackathon-news-2.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p>]]>
+            </description>
+
+            <content:encoded>
+                <![CDATA[<article><p>Me and abduhamid participated in a hackathon with our project <a href="https://sourfly.yocrrz.is-a.dev" target="_blank">
+    sourfly
+</a> and i think we could win? idk well check this project out.</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-21-hackathon-news-2.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p></article>]]>
+            </content:encoded>
+
+            <pubDate>
+                Mon, 21 Sep 2026 12:11:04 GMT
+            </pubDate>
+
+            <guid isPermaLink="false">
+                urn:vrss:2
+            </guid>
+
+            <dc:creator>
+                @yocrrz
+            </dc:creator>
+
+            <category>VorcineX</category>
+            <category>Community</category>
+            <category>vRSS</category>
+
+        </item>
+        
+        <item>
+
             <title>The vRSS server is alive now</title>
 
             <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-21-the-vrss-server-is-alive-now-1.html</link>
