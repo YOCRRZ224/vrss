@@ -18,9 +18,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Generate index.json
-        run: python3 generate_index.py
+        run: |
+          python3 generate_index.py
+          echo "Generated index.json:"
+          cat index.json
+
+      - name: Check changes
+        run: |
+          git status
+          git diff -- index.json
 
       - name: Commit index.json
         run: |
