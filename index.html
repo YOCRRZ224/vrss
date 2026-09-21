@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>YOCRRZ Daily Blog</title>
+
+    <meta
+        name="description"
+        content="YOCRRZ Daily Blog — community posts powered by vRSS."
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #080808;
+            --surface: #101010;
+            --border: rgba(255,255,255,.09);
+            --text: #f5f5f5;
+            --muted: #888;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(
+                    circle at 50% -20%,
+                    rgba(255,255,255,.08),
+                    transparent 40%
+                ),
+                var(--bg);
+            color: var(--text);
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+        }
+
+        .container {
+            width: min(900px, calc(100% - 32px));
+            margin: auto;
+        }
+
+        header {
+            padding: 55px 0 35px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 8vw, 64px);
+            line-height: 1;
+            letter-spacing: -3px;
+        }
+
+        .feed {
+            display: inline-block;
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .feed:hover {
+            color: var(--text);
+        }
+
+        main {
+            padding: 40px 0 80px;
+        }
+
+        #status {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .posts {
+            display: grid;
+            gap: 14px;
+        }
+
+        .post {
+            display: block;
+            padding: 22px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            color: inherit;
+            text-decoration: none;
+            transition:
+                transform .15s ease,
+                border-color .15s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255,255,255,.18);
+        }
+
+        .date {
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 20px;
+            line-height: 1.25;
+        }
+
+        .empty,
+        .error {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="eyebrow">vRSS · Community</div>
+
+        <h1>Daily Blog</h1>
+
+        <a class="feed" href="./feed.xml">
+            RSS Feed →
+        </a>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div id="status">Loading posts…</div>
+        <section id="posts" class="posts"></section>
+    </div>
+</main>
+
+<script>
+    const status = document.getElementById("status");
+    const posts = document.getElementById("posts");
+
+    function formatDate(timestamp) {
+        const date = new Date(timestamp);
+
+        if (Number.isNaN(date.getTime())) {
+            return timestamp;
+        }
+
+        return date.toLocaleString(undefined, {
+            dateStyle: "medium",
+            timeStyle: "short"
+        });
+    }
+
+    function renderPosts(entries) {
+        posts.replaceChildren();
+
+        if (!entries.length) {
+            status.textContent = "No blog posts yet.";
+            return;
+        }
+
+        status.textContent =
+            `${entries.length} post${entries.length === 1 ? "" : "s"}`;
+
+        for (const entry of entries) {
+            const link = document.createElement("a");
+            link.className = "post";
+            link.href = entry.url;
+
+            const date = document.createElement("div");
+            date.className = "date";
+            date.textContent = formatDate(entry.timestamp);
+
+            const title = document.createElement("div");
+            title.className = "title";
+            title.textContent = entry.title;
+
+            link.append(date, title);
+            posts.appendChild(link);
+        }
+    }
+
+    async function loadPosts() {
+        try {
+            const response = await fetch("./index.json", {
+                cache: "no-cache"
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            const entries = await response.json();
+
+            if (!Array.isArray(entries)) {
+                throw new Error("index.json is not an array");
+            }
+
+            renderPosts(entries);
+        } catch (error) {
+            console.error(error);
+            status.textContent = "Could not load the blog index.";
+
+            const message = document.createElement("div");
+            message.className = "error";
+            message.textContent =
+                "index.json could not be loaded. Please try again later.";
+
+            posts.replaceChildren(message);
+        }
+    }
+
+    loadPosts();
+</script>
+
+</body>
+</html>
