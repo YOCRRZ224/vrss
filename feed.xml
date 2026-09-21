@@ -42,6 +42,38 @@
         
         <item>
 
+            <title>test10</title>
+
+            <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-21-test10-4.html</link>
+
+            <description>
+                <![CDATA[<p>HOLY FUCK I M TIRED</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-21-test10-4.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p>]]>
+            </description>
+
+            <content:encoded>
+                <![CDATA[<article><p>HOLY FUCK I M TIRED</p><p><a href="https://YOCRRZ224.github.io/vrss/blog/2026-09-21-test10-4.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p></article>]]>
+            </content:encoded>
+
+            <pubDate>
+                Mon, 21 Sep 2026 10:50:41 GMT
+            </pubDate>
+
+            <guid isPermaLink="false">
+                urn:vrss:4
+            </guid>
+
+            <dc:creator>
+                @yocrrz
+            </dc:creator>
+
+            <category>VorcineX</category>
+            <category>Community</category>
+            <category>vRSS</category>
+
+        </item>
+        
+        <item>
+
             <title>final test9</title>
 
             <link>https://YOCRRZ224.github.io/vrss/blog/2026-09-21-final-test9-3.html</link>
