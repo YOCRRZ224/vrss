@@ -11,7 +11,7 @@
 
         <title>Vorcinex Community RSS</title>
 
-        <link>https://YOCRRZ224.github.io/vrss/</link>
+        <link>https://blog.vorcinex.yocrrz.is-a.dev</link>
 
         <description>Community RSS feed powered by vRSS.</description>
 
@@ -29,16 +29,48 @@
 
             <title>Vorcinex Community RSS</title>
 
-            <link>https://YOCRRZ224.github.io/vrss/</link>
+            <link>https://blog.vorcinex.yocrrz.is-a.dev</link>
 
         </image>
 
         <atom:link
-            href="https://YOCRRZ224.github.io/vrss/feed.xml"
+            href="https://blog.vorcinex.yocrrz.is-a.dev/feed.xml"
             rel="self"
             type="application/rss+xml"
         />
 
+        
+        <item>
+
+            <title>Test 2 for the OG tags</title>
+
+            <link>https://blog.vorcinex.yocrrz.is-a.dev/blog/2026-09-22-test-2-for-the-og-tags-4.html</link>
+
+            <description>
+                <![CDATA[<p>yeah i added auto OG tags for our new uploaded blogs dont forget to check out i used pillow and CI/CD for this.</p><p><a href="https://blog.vorcinex.yocrrz.is-a.dev/blog/2026-09-22-test-2-for-the-og-tags-4.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p>]]>
+            </description>
+
+            <content:encoded>
+                <![CDATA[<article><p>yeah i added auto OG tags for our new uploaded blogs dont forget to check out i used pillow and CI/CD for this.</p><p><a href="https://blog.vorcinex.yocrrz.is-a.dev/blog/2026-09-22-test-2-for-the-og-tags-4.html">Read full blog post</a></p><p><small>Submitted by @yocrrz</small></p></article>]]>
+            </content:encoded>
+
+            <pubDate>
+                Tue, 22 Sep 2026 07:50:38 GMT
+            </pubDate>
+
+            <guid isPermaLink="false">
+                urn:vrss:4
+            </guid>
+
+            <dc:creator>
+                @yocrrz
+            </dc:creator>
+
+            <category>VorcineX</category>
+            <category>Community</category>
+            <category>vRSS</category>
+
+        </item>
         
         <item>
 
