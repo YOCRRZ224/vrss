@@ -1,0 +1,1168 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Vorcinex&#x27;s startup — Daily Blog</title>
+
+    <meta
+        name="description"
+        content="&lt;h2&gt;&lt;b&gt;We, Yocrrz and Abduhamid created&amp;nbsp;&lt;br&gt;studio named vorcinex and this is&lt;br&gt;&amp;nbsp;for everyone who loves programming!&lt;/b&gt;&lt;/h2&gt;&lt;div&gt;&lt;span style=&quot;font-s..."
+    >
+
+    <meta
+        name="blog-title"
+        content="Vorcinex&#x27;s startup"
+    >
+
+    <meta
+        name="blog-timestamp"
+        content="2026-09-22T16:15:18.127439+00:00"
+    >
+
+    <meta name="theme-color" content="#f7f3e8">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --paper: #f7f3e8;
+            --paper-deep: #eee8d8;
+            --surface: #fbf9f3;
+
+            --ink: #252321;
+            --ink-soft: #4f4a43;
+            --muted: #817b70;
+            --faint: #aaa397;
+
+            --border: #ded8c9;
+            --border-dark: #cfc7b5;
+
+            --accent: #c45a3d;
+            --accent-soft: rgba(196, 90, 61, .09);
+
+            --shadow: 0 18px 45px rgba(62, 48, 31, .055);
+
+            --sans:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            --mono:
+                "Source Code Pro",
+                "SFMono-Regular",
+                Consolas,
+                "Liberation Mono",
+                monospace;
+
+            --serif:
+                Georgia,
+                "Times New Roman",
+                serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    var(--paper) 0%,
+                    #f5f0e4 100%
+                );
+
+            color: var(--ink);
+
+            font-family: var(--sans);
+            font-size: 1rem;
+            line-height: 1.7;
+
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        ::selection {
+            background: rgba(196, 90, 61, .18);
+            color: var(--ink);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 0;
+            height: 3px;
+
+            background: var(--accent);
+
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .container {
+            width: min(
+                820px,
+                calc(100% - 40px)
+            );
+
+            margin-inline: auto;
+        }
+
+        /*
+         * HEADER
+         */
+
+        header {
+            position: relative;
+
+            padding:
+                42px
+                0
+                52px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 58px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            color: var(--ink);
+        }
+
+        .brand-mark {
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: var(--accent);
+
+            box-shadow:
+                0 0 0 5px var(--accent-soft);
+        }
+
+        .brand-name {
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 600;
+
+            letter-spacing: .08em;
+            text-transform: lowercase;
+        }
+
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+            font-weight: 500;
+
+            transition:
+                color .2s ease,
+                transform .2s ease;
+        }
+
+        .back-icon {
+            width: 15px;
+            height: 15px;
+
+            stroke: currentColor;
+            stroke-width: 1.8;
+
+            transition:
+                transform .2s ease;
+        }
+
+        .back:hover {
+            color: var(--accent);
+        }
+
+        .back:hover .back-icon {
+            transform: translateX(-3px);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-bottom: 17px;
+
+            color: var(--muted);
+
+            font-family: var(--mono);
+            font-size: 11px;
+
+            letter-spacing: .025em;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+
+            border-radius: 50%;
+
+            background: var(--faint);
+        }
+
+        h1 {
+            max-width: 850px;
+
+            color: var(--ink);
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                2.6rem,
+                7vw,
+                5rem
+            );
+
+            font-weight: 600;
+
+            line-height: .98;
+
+            letter-spacing: -.045em;
+
+            text-wrap: balance;
+        }
+
+        .dek {
+            max-width: 650px;
+
+            margin-top: 23px;
+
+            color: var(--ink-soft);
+
+            font-size: 1.08rem;
+            line-height: 1.65;
+        }
+
+        .author-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 28px;
+        }
+
+        .author {
+            color: var(--muted);
+
+            font-family: var(--mono);
+            font-size: 11px;
+
+            letter-spacing: .02em;
+        }
+
+        .author strong {
+            color: var(--ink-soft);
+            font-weight: 600;
+        }
+
+        .author-separator {
+            width: 4px;
+            height: 4px;
+
+            border-radius: 50%;
+
+            background: var(--border-dark);
+        }
+
+        .copy-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            margin-left: auto;
+
+            padding: 7px 10px;
+
+            border: 1px solid var(--border);
+            border-radius: 7px;
+
+            background: rgba(255,255,255,.32);
+
+            color: var(--muted);
+
+            font-family: var(--mono);
+            font-size: 10px;
+
+            cursor: pointer;
+
+            transition:
+                color .2s ease,
+                background .2s ease,
+                border-color .2s ease;
+        }
+
+        .copy-link:hover {
+            color: var(--accent);
+            border-color: var(--border-dark);
+            background: var(--surface);
+        }
+
+        .copy-link svg {
+            width: 13px;
+            height: 13px;
+
+            stroke: currentColor;
+            stroke-width: 1.7;
+        }
+
+        /*
+         * ARTICLE
+         */
+
+        main {
+            padding:
+                60px
+                0
+                100px;
+        }
+
+        article {
+            min-width: 0;
+        }
+
+        .article-inner {
+            width: min(
+                100%,
+                700px
+            );
+
+            margin-inline: auto;
+        }
+
+        article p {
+            margin:
+                0
+                0
+                1.55em;
+
+            color: var(--ink-soft);
+
+            font-family: var(--serif);
+            font-size: 1.08rem;
+            line-height: 1.85;
+
+            overflow-wrap: break-word;
+        }
+
+        article p:last-child {
+            margin-bottom: 0;
+        }
+
+        article h2,
+        article h3,
+        article h4 {
+            color: var(--ink);
+
+            font-family: var(--serif);
+
+            font-weight: 600;
+
+            line-height: 1.2;
+            letter-spacing: -.025em;
+        }
+
+        article h2 {
+            margin:
+                2.5em
+                0
+                .7em;
+
+            font-size: 1.8rem;
+        }
+
+        article h3 {
+            margin:
+                2.2em
+                0
+                .65em;
+
+            font-size: 1.4rem;
+        }
+
+        article h4 {
+            margin:
+                2em
+                0
+                .6em;
+
+            font-size: 1.15rem;
+        }
+
+        /*
+         * LINKS
+         */
+
+        article a {
+            color: var(--accent);
+
+            text-decoration-line: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+
+            transition:
+                color .2s ease,
+                text-decoration-color .2s ease;
+        }
+
+        article a:hover {
+            color: #9e4029;
+        }
+
+        /*
+         * LISTS
+         */
+
+        article ul,
+        article ol {
+            margin:
+                0
+                0
+                1.6em
+                1.3em;
+
+            padding-left: 1.1em;
+
+            color: var(--ink-soft);
+
+            font-family: var(--serif);
+            font-size: 1.06rem;
+
+            line-height: 1.8;
+        }
+
+        article li {
+            padding-left: .35em;
+            margin-bottom: .45em;
+        }
+
+        article li::marker {
+            color: var(--accent);
+        }
+
+        /*
+         * BLOCKQUOTES
+         */
+
+        article blockquote {
+            position: relative;
+
+            margin:
+                2.4em
+                0;
+
+            padding:
+                8px
+                0
+                8px
+                28px;
+
+            border-left:
+                2px
+                solid
+                var(--accent);
+
+            color: var(--ink);
+
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-style: italic;
+
+            line-height: 1.55;
+        }
+
+        article blockquote p {
+            margin: 0;
+            color: inherit;
+            font-size: inherit;
+        }
+
+        /*
+         * CODE
+         */
+
+        article code {
+            padding:
+                .15em
+                .35em;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 4px;
+
+            background: var(--paper-deep);
+
+            color: #8f402d;
+
+            font-family: var(--mono);
+            font-size: .82em;
+        }
+
+        article pre {
+            overflow-x: auto;
+
+            margin:
+                2em
+                0;
+
+            padding: 20px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 9px;
+
+            background: #ebe5d8;
+
+            box-shadow:
+                inset 0 1px 0 rgba(255,255,255,.4);
+        }
+
+        article pre code {
+            display: block;
+
+            padding: 0;
+
+            border: 0;
+            border-radius: 0;
+
+            background: transparent;
+
+            color: var(--ink);
+
+            font-size: .83rem;
+            line-height: 1.7;
+
+            white-space: pre;
+        }
+
+        /*
+         * IMAGES
+         */
+
+        article img {
+            display: block;
+
+            max-width: 100%;
+            height: auto;
+
+            margin:
+                2.2em
+                auto;
+
+            border:
+                1px
+                solid
+                var(--border);
+
+            border-radius: 9px;
+
+            box-shadow: var(--shadow);
+        }
+
+        article figure {
+            margin:
+                2.4em
+                0;
+        }
+
+        article figure img {
+            margin: 0;
+        }
+
+        article figcaption {
+            margin-top: 9px;
+
+            color: var(--muted);
+
+            font-family: var(--mono);
+            font-size: 10px;
+
+            line-height: 1.5;
+        }
+
+        /*
+         * TABLES
+         */
+
+        article table {
+            width: 100%;
+
+            margin:
+                2em
+                0;
+
+            border-collapse: collapse;
+
+            font-family: var(--sans);
+            font-size: .9rem;
+        }
+
+        article th,
+        article td {
+            padding:
+                10px
+                12px;
+
+            border-bottom:
+                1px
+                solid
+                var(--border);
+
+            text-align: left;
+            vertical-align: top;
+        }
+
+        article th {
+            color: var(--ink);
+
+            font-family: var(--mono);
+            font-size: 10px;
+
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+
+        article td {
+            color: var(--ink-soft);
+        }
+
+        /*
+         * HORIZONTAL RULE
+         */
+
+        article hr {
+            width: 100%;
+            height: 1px;
+
+            margin:
+                3em
+                0;
+
+            border: 0;
+
+            background: var(--border);
+        }
+
+        /*
+         * FOOTER
+         */
+
+        footer {
+            border-top: 1px solid var(--border);
+
+            padding:
+                28px
+                0
+                45px;
+
+            color: var(--muted);
+
+            font-family: var(--mono);
+            font-size: 10px;
+
+            letter-spacing: .02em;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            color: var(--ink-soft);
+        }
+
+        .footer-link {
+            color: var(--muted);
+
+            transition:
+                color .2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+        }
+
+        /*
+         * FOCUS
+         */
+
+        :focus-visible {
+            outline:
+                2px
+                solid
+                var(--accent);
+
+            outline-offset: 4px;
+        }
+
+        /*
+         * MOBILE
+         */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: min(
+                    100% - 28px,
+                    820px
+                );
+            }
+
+            header {
+                padding:
+                    28px
+                    0
+                    42px;
+            }
+
+            .topbar {
+                margin-bottom: 45px;
+            }
+
+            h1 {
+                font-size: clamp(
+                    2.45rem,
+                    13vw,
+                    4rem
+                );
+
+                letter-spacing: -.04em;
+            }
+
+            .dek {
+                font-size: 1rem;
+            }
+
+            .copy-link {
+                margin-left: 0;
+            }
+
+            main {
+                padding:
+                    42px
+                    0
+                    75px;
+            }
+
+            .article-inner {
+                width: 100%;
+            }
+
+            article p {
+                font-size: 1.04rem;
+                line-height: 1.8;
+            }
+
+            article h2 {
+                font-size: 1.6rem;
+            }
+
+            article h3 {
+                font-size: 1.3rem;
+            }
+
+            article blockquote {
+                padding-left: 20px;
+                font-size: 1.15rem;
+            }
+
+            article pre {
+                margin-left: -2px;
+                margin-right: -2px;
+
+                border-radius: 7px;
+
+                padding: 16px;
+            }
+
+            article table {
+                display: block;
+                overflow-x: auto;
+            }
+
+        }
+
+        @media (max-width: 420px) {
+
+            .container {
+                width: min(
+                    100% - 22px,
+                    820px
+                );
+            }
+
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .post-meta {
+                font-size: 10px;
+            }
+
+            .author-row {
+                align-items: flex-start;
+                flex-direction: column;
+
+                gap: 9px;
+            }
+
+            .author-separator {
+                display: none;
+            }
+
+            .copy-link {
+                margin-top: 4px;
+            }
+
+        }
+
+        /*
+         * REDUCED MOTION
+         */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div
+    class="reading-progress"
+    id="readingProgress"
+    aria-hidden="true"
+></div>
+
+<header>
+
+    <div class="container">
+
+        <div class="topbar">
+
+            <a
+                class="brand"
+                href="/"
+                aria-label="YOCRRZ Daily Blog home"
+            >
+
+                <span class="brand-mark"></span>
+
+                <span class="brand-name">
+                    yocrrz
+                </span>
+
+            </a>
+
+            <a
+                class="back"
+                href="/"
+            >
+
+                <svg
+                    class="back-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M19 12H5"
+                    />
+                    <path
+                        d="M11 18L5 12L11 6"
+                    />
+                </svg>
+
+                Back to Daily Blog
+
+            </a>
+
+        </div>
+
+        <div class="post-meta">
+
+            <span>
+                September 22, 2026
+            </span>
+
+            <span class="meta-dot"></span>
+
+            <span>
+                09:45 PM
+            </span>
+
+            <span class="meta-dot"></span>
+
+            <span>
+                vRSS
+            </span>
+
+        </div>
+
+        <h1>
+            Vorcinex&#x27;s startup
+        </h1>
+
+        <div class="author-row">
+
+            <div class="author">
+                Published by
+                <strong>@uzgame_developer</strong>
+            </div>
+
+            <span class="author-separator"></span>
+
+            <button
+                class="copy-link"
+                id="copyLink"
+                type="button"
+                aria-label="Copy link to this post"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                >
+                    <rect
+                        x="9"
+                        y="9"
+                        width="10"
+                        height="10"
+                        rx="2"
+                    />
+                    <path
+                        d="M15 9V7C15 5.895 14.105 5 13 5H7C5.895 5 5 5.895 5 7V13C5 14.105 5.895 15 7 15H9"
+                    />
+                </svg>
+
+                Copy link
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main>
+
+    <div class="container">
+
+        <article>
+
+            <div class="article-inner">
+
+                <p><h2><b>We, Yocrrz and Abduhamid created&nbsp;<br>studio named vorcinex and this is<br>&nbsp;for everyone who loves programming!</b></h2><div><span style="font-size: 25px;">Currently we have professional programmers who are:</span></div><h2>Clint-Fullstack developer<br>Shlokhart-Frontent<br>Mehrscvx-kotlin/android</h2><div><b><br></b></div><blockquote>WE WELCOME EVERYONE!</blockquote></p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</main>
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <span class="footer-brand">
+                YOCRRZ Daily Blog · vRSS
+            </span>
+
+            <a
+                class="footer-link"
+                href="/"
+            >
+                All posts
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+
+    /*
+     * Reading progress
+     */
+
+    const progress =
+        document.getElementById("readingProgress");
+
+    function updateProgress() {
+
+        const scrollTop =
+            window.scrollY;
+
+        const documentHeight =
+            document.documentElement.scrollHeight -
+            window.innerHeight;
+
+        const percentage =
+            documentHeight > 0
+                ? (scrollTop / documentHeight) * 100
+                : 0;
+
+        progress.style.width =
+            `${Math.min(100, Math.max(0, percentage))}%`;
+    }
+
+    window.addEventListener(
+        "scroll",
+        updateProgress,
+        { passive: true }
+    );
+
+    window.addEventListener(
+        "resize",
+        updateProgress
+    );
+
+    updateProgress();
+
+
+    /*
+     * Copy post URL
+     */
+
+    const copyButton =
+        document.getElementById("copyLink");
+
+    if (copyButton) {
+
+        copyButton.addEventListener(
+            "click",
+            async () => {
+
+                const original =
+                    copyButton.innerHTML;
+
+                try {
+
+                    await navigator.clipboard.writeText(
+                        window.location.href
+                    );
+
+                    copyButton.innerHTML = `
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M5 12.5L9.5 17L19 7"
+                            />
+                        </svg>
+                        Copied
+                    `;
+
+                } catch (error) {
+
+                    copyButton.textContent =
+                        "Copy failed";
+
+                }
+
+                setTimeout(() => {
+
+                    copyButton.innerHTML =
+                        original;
+
+                }, 1600);
+
+            }
+        );
+
+    }
+
+</script>
+
+</body>
+
+</html>
